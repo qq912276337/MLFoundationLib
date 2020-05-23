@@ -1,0 +1,16 @@
+PODS:
+  - MLFoundationLib (0.1.0)
+
+DEPENDENCIES:
+  - MLFoundationLib (from `../`)
+
+EXTERNAL SOURCES:
+  MLFoundationLib:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MLFoundationLib: ed2be057b4c1e347f63b31ce27b9357a85b3676c
+
+PODFILE CHECKSUM: 258e6001781bd5482ef681149ad33c9297d19821
+
+COCOAPODS: 1.8.4

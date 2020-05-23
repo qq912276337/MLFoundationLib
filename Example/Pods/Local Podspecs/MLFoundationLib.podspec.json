@@ -1,0 +1,22 @@
+{
+  "name": "MLFoundationLib",
+  "version": "0.1.0",
+  "summary": "MLFoundationLib",
+  "description": "封装各种iOS组件的基础性框架",
+  "homepage": "https://github.com/qq912276337/MLFoundationLib",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "qq912276337": "smlsjq@163.com"
+  },
+  "source": {
+    "git": "https://github.com/qq912276337/MLFoundationLib.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "MLFoundationLib/Classes/**/*"
+}

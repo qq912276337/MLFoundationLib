@@ -1,0 +1,6 @@
+framework module MLFoundationLib {
+  umbrella header "MLFoundationLib-umbrella.h"
+
+  export *
+  module * { export * }
+}
