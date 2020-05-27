@@ -9,4 +9,5 @@ target 'MLFoundationLib_Example' do
   pod 'Colours'
   pod 'ReactiveObjC'
   pod 'YBImageBrowser/Video'
+  pod 'FMDB'
 end

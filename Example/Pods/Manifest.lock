@@ -2,6 +2,9 @@ PODS:
   - Colours (5.13.0):
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MLFoundationLib (0.1.0)
@@ -20,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - Colours
+  - FMDB
   - Masonry (from `https://github.com/SnapKit/Masonry.git`)
   - MBProgressHUD (~> 1.2.0)
   - MLFoundationLib (from `../`)
@@ -29,6 +33,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Colours
+    - FMDB
     - MBProgressHUD
     - ReactiveObjC
     - SDWebImage
@@ -48,6 +53,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MLFoundationLib: ed2be057b4c1e347f63b31ce27b9357a85b3676c
@@ -56,6 +62,6 @@ SPEC CHECKSUMS:
   YBImageBrowser: 7ecc8bf33ffa5f3b94c397c29b4f3638dd37f527
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: cc8d21d38df4c35f78eaf6c05f0b04293c18d8e4
+PODFILE CHECKSUM: f0c9246afecde8a9b0dfc853541979af74305263
 
 COCOAPODS: 1.8.4

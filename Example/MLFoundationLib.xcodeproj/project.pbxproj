@@ -22,6 +22,9 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B1528F5C247E90290044A83D /* MLTitleValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1528F58247E90290044A83D /* MLTitleValueModel.m */; };
+		B1528F5D247E90290044A83D /* FMDBDemoVc.m in Sources */ = {isa = PBXBuildFile; fileRef = B1528F5A247E90290044A83D /* FMDBDemoVc.m */; };
+		B1528F60247E90450044A83D /* MLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1528F5F247E90450044A83D /* MLBaseViewController.m */; };
 		FE95C276E9E2AE7948573C35 /* Pods_MLFoundationLib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD81F6C3867EDE59D9B9F4BC /* Pods_MLFoundationLib_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,12 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		918F5518AB1B344066D1B251 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B1528F57247E90290044A83D /* MLTitleValueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTitleValueModel.h; sourceTree = "<group>"; };
+		B1528F58247E90290044A83D /* MLTitleValueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTitleValueModel.m; sourceTree = "<group>"; };
+		B1528F5A247E90290044A83D /* FMDBDemoVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBDemoVc.m; sourceTree = "<group>"; };
+		B1528F5B247E90290044A83D /* FMDBDemoVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBDemoVc.h; sourceTree = "<group>"; };
+		B1528F5E247E90450044A83D /* MLBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLBaseViewController.h; sourceTree = "<group>"; };
+		B1528F5F247E90450044A83D /* MLBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLBaseViewController.m; sourceTree = "<group>"; };
 		DB4D868EF865CC2EC4095541 /* MLFoundationLib.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MLFoundationLib.podspec; path = ../MLFoundationLib.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DD81F6C3867EDE59D9B9F4BC /* Pods_MLFoundationLib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLFoundationLib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5C448A3863DC685DEB82E5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -135,7 +144,8 @@
 		6003F593195388D20070C39A /* Example for MLFoundationLib */ = {
 			isa = PBXGroup;
 			children = (
-				B1528F4B247E88840044A83D /* modules */,
+				B1528F55247E90290044A83D /* Modules */,
+				B1528F54247E90200044A83D /* ViewController */,
 				6003F59C195388D20070C39A /* MLAppDelegate.h */,
 				6003F59D195388D20070C39A /* MLAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -189,11 +199,40 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		B1528F4B247E88840044A83D /* modules */ = {
+		B1528F54247E90200044A83D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B1528F5E247E90450044A83D /* MLBaseViewController.h */,
+				B1528F5F247E90450044A83D /* MLBaseViewController.m */,
 			);
-			path = modules;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B1528F55247E90290044A83D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B1528F56247E90290044A83D /* Home */,
+				B1528F59247E90290044A83D /* FMDB */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B1528F56247E90290044A83D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B1528F57247E90290044A83D /* MLTitleValueModel.h */,
+				B1528F58247E90290044A83D /* MLTitleValueModel.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B1528F59247E90290044A83D /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				B1528F5B247E90290044A83D /* FMDBDemoVc.h */,
+				B1528F5A247E90290044A83D /* FMDBDemoVc.m */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +363,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MLFoundationLib_Example/Pods-MLFoundationLib_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MLFoundationLib/MLFoundationLib.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
@@ -335,6 +375,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLFoundationLib.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
@@ -355,9 +396,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1528F60247E90450044A83D /* MLBaseViewController.m in Sources */,
 				6003F59E195388D20070C39A /* MLAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MLViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				B1528F5D247E90290044A83D /* FMDBDemoVc.m in Sources */,
+				B1528F5C247E90290044A83D /* MLTitleValueModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

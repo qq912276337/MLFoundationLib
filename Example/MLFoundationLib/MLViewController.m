@@ -8,6 +8,9 @@
 
 #import "MLViewController.h"
 #import <Masonry/Masonry.h>
+#import "MLTitleValueModel.h"
+
+#import "FMDBDemoVc.h"
 
 static NSString *kMLVcCellKey = @"kMLVcCellKey";
 
@@ -23,9 +26,9 @@ static NSString *kMLVcCellKey = @"kMLVcCellKey";
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor grayColor];
     self.title = NSStringFromClass([self class]);
     
+    self.view.backgroundColor = [UIColor grayColor];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         if (@available(iOS 11.0, *)) {
@@ -40,28 +43,40 @@ static NSString *kMLVcCellKey = @"kMLVcCellKey";
             make.right.equalTo(self.view);
         }
     }];
-    
-	// Do any additional setup after loading the view, typically from a nib.
+    __weak typeof(self) weakSelf = self;
+    [self.items addObject:[self modelWithTitle:NSStringFromClass([FMDBDemoVc class]) clickBlock:^{
+        [weakSelf.navigationController pushViewController:[FMDBDemoVc new] animated:YES];
+    }]];
+    [self.tableView reloadData];
+}
+
+- (MLTitleValueModel *)modelWithTitle:(NSString *)title clickBlock:(MLTitleValueClickBlock )clickBlock {
+    MLTitleValueModel *model = [MLTitleValueModel new];
+    model.title = title;
+    model.clickBlock = clickBlock;
+    return model;
 }
 
 #pragma mark - UITableView
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return self.items.count;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSArray *arr = self.items[section];
-    return arr.count;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMLVcCellKey forIndexPath:indexPath];
+    MLTitleValueModel *model = self.items[indexPath.row];
+    cell.textLabel.text = model.title;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    MLTitleValueModel *model = self.items[indexPath.row];
+    if(model.clickBlock){
+        model.clickBlock();
+    }
 }
 
 
