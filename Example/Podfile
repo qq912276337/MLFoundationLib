@@ -4,5 +4,9 @@ platform :ios, '9.0'
 
 target 'MLFoundationLib_Example' do
   pod 'MLFoundationLib', :path => '../'
-
+  pod 'Masonry', :git => 'https://github.com/SnapKit/Masonry.git'
+  pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'Colours'
+  pod 'ReactiveObjC'
+  pod 'YBImageBrowser/Video'
 end
