@@ -17,20 +17,6 @@
 
 @implementation DLTempCellNode
 
-- (void)dealloc{
-    NSLog(@"---%@--",@"DLTempCellNode dealloc");
-    [_nameNode removeFromSupernode];
-    [_descNode removeFromSupernode];
-    _nameNode = nil;
-    _descNode = nil;
-}
-
-- (void)didExitDisplayState{
-    [super didExitDisplayState];
-    NSLog(@"---%@--",@"DLTempCellNode didExitDisplayState");
-
-}
-
 - (instancetype)init
 {
     self = [super init];
