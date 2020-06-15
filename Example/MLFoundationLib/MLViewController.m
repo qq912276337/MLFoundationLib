@@ -11,6 +11,7 @@
 #import "MLTitleValueModel.h"
 
 #import "FMDBDemoVc.h"
+#import "MLAsyncDisplayKitVC.h"
 
 static NSString *kMLVcCellKey = @"kMLVcCellKey";
 
@@ -44,9 +45,15 @@ static NSString *kMLVcCellKey = @"kMLVcCellKey";
         }
     }];
     __weak typeof(self) weakSelf = self;
+    
     [self.items addObject:[self modelWithTitle:NSStringFromClass([FMDBDemoVc class]) clickBlock:^{
         [weakSelf.navigationController pushViewController:[FMDBDemoVc new] animated:YES];
     }]];
+    
+    [self.items addObject:[self modelWithTitle:NSStringFromClass([MLAsyncDisplayKitVC class]) clickBlock:^{
+        [weakSelf.navigationController pushViewController:[MLAsyncDisplayKitVC new] animated:YES];
+    }]];
+    
     [self.tableView reloadData];
 }
 
