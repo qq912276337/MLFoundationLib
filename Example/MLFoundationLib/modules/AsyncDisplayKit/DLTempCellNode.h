@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DLTempCellNode : ASCellNode
 
+@property (nonatomic, strong,readonly) ASTextNode *nameNode;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

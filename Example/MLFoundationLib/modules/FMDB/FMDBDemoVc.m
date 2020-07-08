@@ -10,20 +10,38 @@
 #import <FMDB/FMDB.h>
 #import "MLFileUtl.h"
 
+typedef void(^FMDBDemoVcClickBlock)(void);
+
 @interface FMDBDemoVc ()
 
 @property (nonatomic, strong) NSMutableArray<NSDictionary *> *items;
 
+@property (nonatomic, copy) FMDBDemoVcClickBlock clickBlock;
 
 @end
 
 @implementation FMDBDemoVc
 
+- (void)dealloc{
+    NSLog(@"---%@--",@"dealloc");
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createDataBase];
     
+    self.clickBlock = ^{
+        [self createDataBase];
+    };
+    
     // Do any additional setup after loading the view.
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    if(self.clickBlock){
+        self.clickBlock();
+    }
 }
 
 - (void)createDataBase {

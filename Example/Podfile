@@ -12,7 +12,7 @@ target 'MLFoundationLib_Example' do
   pod 'FMDB'
   pod 'MJRefresh'
 
-  pod 'AsyncDisplayKit', :git => 'https://gitee.com/qq912276337/Texture.git',:tag => '2.0.2'
+  pod 'Texture', :git => 'https://gitee.com/qq912276337/Texture.git',:tag => '2.8'
 #  pod 'AsyncDisplayKit', :git => 'https://gitee.com/qq912276337/Texture.git',:tag => '2.8.1'
 
 end

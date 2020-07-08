@@ -7,7 +7,6 @@
 
 #import "MLAsyncDisplayKitVC.h"
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
-#import "DLTempTexTNode.h"
 #import "DLTempCellNode.h"
 #import <MJRefresh/MJRefresh.h>
 
@@ -25,11 +24,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     _imageCategories = @[].mutableCopy;
     
-    for (int i = 0; i  < 10; i++) {
-        [_imageCategories addObject:[NSString stringWithFormat:@"%d",i]];
-    }
+//    for (int i = 0; i  < 10; i++) {
+//        [_imageCategories addObject:[NSString stringWithFormat:@"%d",i]];
+//    }
 
     self.title = NSStringFromClass([self class]);
     self.view.backgroundColor = [UIColor whiteColor];
@@ -63,7 +64,7 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [_imageCategories removeAllObjects];
-        for (int i = 0; i  < 10; i++) {
+        for (int i = 0; i  < 20; i++) {
             [_imageCategories addObject:[NSString stringWithFormat:@"%d",i]];
         }
         [self.tableNode.view.mj_header endRefreshing];
@@ -75,7 +76,7 @@
     [self.tableNode.view.mj_footer beginRefreshing];
     NSInteger count = _imageCategories.count;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        for (int i = 0; i  < 10; i++) {
+        for (int i = 0; i  < 20; i++) {
             [_imageCategories addObject:[NSString stringWithFormat:@"%ld",i + count]];
         }
         [self.tableNode.view.mj_footer endRefreshing];
@@ -105,15 +106,9 @@
 }
 
 - (ASCellNode *)tableNode:(ASTableNode *)tableNode nodeForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    DLMyTextCellNode *cellNode = [DLMyTextCellNode new];
-//    cellNode.textNode.attributedText = [[NSAttributedString alloc] initWithString:@"11111"];
-//    return cellNode;
-//    NSString *imageCategory = self.imageCategories[indexPath.row];
-//    DLTempTexTNode *textCellNode = [DLTempTexTNode new];
-//    textCellNode.text = [imageCategory capitalizedString];
-//    return textCellNode;
     DLTempCellNode *cellNode = [DLTempCellNode new];
     cellNode.backgroundColor = indexPath.row % 2 == 0 ? [UIColor grayColor] : [UIColor blueColor];;
+    cellNode.nameNode.attributedText = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"DLTempCellNode:%ld",indexPath.row]];
     return cellNode;
 }
 

@@ -12,6 +12,7 @@
 
 #import "FMDBDemoVc.h"
 #import "MLAsyncDisplayKitVC.h"
+#import "MLLockViewController.h"
 
 static NSString *kMLVcCellKey = @"kMLVcCellKey";
 
@@ -44,6 +45,11 @@ static NSString *kMLVcCellKey = @"kMLVcCellKey";
             make.right.equalTo(self.view);
         }
     }];
+    
+    [self setupData];
+}
+
+- (void)setupData {
     __weak typeof(self) weakSelf = self;
     
     [self.items addObject:[self modelWithTitle:NSStringFromClass([FMDBDemoVc class]) clickBlock:^{
@@ -52,6 +58,10 @@ static NSString *kMLVcCellKey = @"kMLVcCellKey";
     
     [self.items addObject:[self modelWithTitle:NSStringFromClass([MLAsyncDisplayKitVC class]) clickBlock:^{
         [weakSelf.navigationController pushViewController:[MLAsyncDisplayKitVC new] animated:YES];
+    }]];
+    
+    [self.items addObject:[self modelWithTitle:NSStringFromClass([MLLockViewController class]) clickBlock:^{
+        [weakSelf.navigationController pushViewController:[MLLockViewController new] animated:YES];
     }]];
     
     [self.tableView reloadData];

@@ -64,10 +64,10 @@
 }
 
 
-- (ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize
-{
-  return [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(30, 30, 30, 30) child:self.nameNode];
-}
+//- (ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize
+//{
+//  return [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(30, 30, 30, 30) child:self.nameNode];
+//}
 
 
 //- (ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize
@@ -110,19 +110,19 @@
 //  return mainStack;
 //}
 
-//- (ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize{
-//    NSLog(@"---%@--",@"layoutSpecThatFits");
-//    return [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionVertical spacing:20 justifyContent:ASStackLayoutJustifyContentCenter alignItems:ASStackLayoutAlignItemsCenter children:@[
-//        [ASStackLayoutSpec
-//                      stackLayoutSpecWithDirection:ASStackLayoutDirectionVertical
-//                      spacing:0.0
-//                      justifyContent:ASStackLayoutJustifyContentStart
-//                      alignItems:ASStackLayoutAlignItemsCenter children:@[
-//                          [_nameNode styledWithBlock:^(ASLayoutElementStyle *style) {
-//                                            style.flexShrink = 1.0;
-//                                          }]
-//                      ]]
-//    ]];
-//}
+- (ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize{
+    NSLog(@"---%@--",@"layoutSpecThatFits");
+    return [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionVertical spacing:20 justifyContent:ASStackLayoutJustifyContentCenter alignItems:ASStackLayoutAlignItemsCenter children:@[
+        [ASStackLayoutSpec
+                      stackLayoutSpecWithDirection:ASStackLayoutDirectionVertical
+                      spacing:0.0
+                      justifyContent:ASStackLayoutJustifyContentStart
+                      alignItems:ASStackLayoutAlignItemsCenter children:@[
+                          [_nameNode styledWithBlock:^(ASLayoutElementStyle *style) {
+                                            style.flexShrink = 1.0;
+                                          }]
+                      ]]
+    ]];
+}
 
 @end
