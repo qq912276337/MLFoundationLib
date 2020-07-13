@@ -13,6 +13,7 @@
 #import "FMDBDemoVc.h"
 #import "MLAsyncDisplayKitVC.h"
 #import "MLLockViewController.h"
+#import "MLCommonTestViewController.h"
 
 static NSString *kMLVcCellKey = @"kMLVcCellKey";
 
@@ -62,6 +63,10 @@ static NSString *kMLVcCellKey = @"kMLVcCellKey";
     
     [self.items addObject:[self modelWithTitle:NSStringFromClass([MLLockViewController class]) clickBlock:^{
         [weakSelf.navigationController pushViewController:[MLLockViewController new] animated:YES];
+    }]];
+    
+    [self.items addObject:[self modelWithTitle:NSStringFromClass([MLCommonTestViewController class]) clickBlock:^{
+        [weakSelf.navigationController pushViewController:[MLCommonTestViewController new] animated:YES];
     }]];
     
     [self.tableView reloadData];

@@ -7,11 +7,13 @@
 //
 
 #import "MLAppDelegate.h"
+#import <MMKV/MMKV.h>
 
 @implementation MLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [MMKV initializeMMKV:nil];
     // Override point for customization after application launch.
     return YES;
 }

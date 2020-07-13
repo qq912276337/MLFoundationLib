@@ -29,6 +29,9 @@
 		B15411ED2497748B00F07A45 /* DLTempCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B15411E82497748B00F07A45 /* DLTempCellNode.m */; };
 		B15411EF2497748B00F07A45 /* DLTempTexTNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B15411EA2497748B00F07A45 /* DLTempTexTNode.m */; };
 		B1A1CB402480EE4E00898395 /* MLFileUtl.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A1CB3F2480EE4E00898395 /* MLFileUtl.m */; };
+		B1BA820724BC05AC002E77FD /* MLCommonTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BA820524BC05AC002E77FD /* MLCommonTestViewController.m */; };
+		B1BA820824BC05AC002E77FD /* MLCommonTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1BA820624BC05AC002E77FD /* MLCommonTestViewController.xib */; };
+		B1BA820B24BC5709002E77FD /* MLMMAPUtl.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BA820A24BC5709002E77FD /* MLMMAPUtl.m */; };
 		B1EE746224AAE2C100278A54 /* MLAsyncDisplayKitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE746024AAE2C100278A54 /* MLAsyncDisplayKitVC.m */; };
 		FE95C276E9E2AE7948573C35 /* Pods_MLFoundationLib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD81F6C3867EDE59D9B9F4BC /* Pods_MLFoundationLib_Example.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +85,11 @@
 		B15411EC2497748B00F07A45 /* DLTempTexTNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTempTexTNode.h; sourceTree = "<group>"; };
 		B1A1CB3E2480EE4E00898395 /* MLFileUtl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLFileUtl.h; sourceTree = "<group>"; };
 		B1A1CB3F2480EE4E00898395 /* MLFileUtl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLFileUtl.m; sourceTree = "<group>"; };
+		B1BA820424BC05AC002E77FD /* MLCommonTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLCommonTestViewController.h; sourceTree = "<group>"; };
+		B1BA820524BC05AC002E77FD /* MLCommonTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLCommonTestViewController.m; sourceTree = "<group>"; };
+		B1BA820624BC05AC002E77FD /* MLCommonTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLCommonTestViewController.xib; sourceTree = "<group>"; };
+		B1BA820924BC5709002E77FD /* MLMMAPUtl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLMMAPUtl.h; sourceTree = "<group>"; };
+		B1BA820A24BC5709002E77FD /* MLMMAPUtl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLMMAPUtl.m; sourceTree = "<group>"; };
 		B1EE746024AAE2C100278A54 /* MLAsyncDisplayKitVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAsyncDisplayKitVC.m; sourceTree = "<group>"; };
 		B1EE746124AAE2C100278A54 /* MLAsyncDisplayKitVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAsyncDisplayKitVC.h; sourceTree = "<group>"; };
 		DB4D868EF865CC2EC4095541 /* MLFoundationLib.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MLFoundationLib.podspec; path = ../MLFoundationLib.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -159,6 +167,7 @@
 		6003F593195388D20070C39A /* Example for MLFoundationLib */ = {
 			isa = PBXGroup;
 			children = (
+				B1BA820324BC059F002E77FD /* CommonTest */,
 				B1A1CB3D2480EE3100898395 /* Utl */,
 				B1528F55247E90290044A83D /* Modules */,
 				B1528F54247E90200044A83D /* ViewController */,
@@ -280,8 +289,21 @@
 			children = (
 				B1A1CB3E2480EE4E00898395 /* MLFileUtl.h */,
 				B1A1CB3F2480EE4E00898395 /* MLFileUtl.m */,
+				B1BA820924BC5709002E77FD /* MLMMAPUtl.h */,
+				B1BA820A24BC5709002E77FD /* MLMMAPUtl.m */,
 			);
 			path = Utl;
+			sourceTree = "<group>";
+		};
+		B1BA820324BC059F002E77FD /* CommonTest */ = {
+			isa = PBXGroup;
+			children = (
+				B1BA820424BC05AC002E77FD /* MLCommonTestViewController.h */,
+				B1BA820524BC05AC002E77FD /* MLCommonTestViewController.m */,
+				B1BA820624BC05AC002E77FD /* MLCommonTestViewController.xib */,
+			);
+			name = CommonTest;
+			path = Modules/CommonTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1BA820824BC05AC002E77FD /* MLCommonTestViewController.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
@@ -416,9 +439,12 @@
 				"${PODS_ROOT}/Target Support Files/Pods-MLFoundationLib_Example/Pods-MLFoundationLib_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/Logan/Logan.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MLFoundationLib/MLFoundationLib.framework",
+				"${BUILT_PRODUCTS_DIR}/MMKV/MMKV.framework",
+				"${BUILT_PRODUCTS_DIR}/MMKVCore/MMKVCore.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
@@ -433,9 +459,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Logan.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLFoundationLib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMKV.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMKVCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
@@ -462,10 +491,12 @@
 				B1528F60247E90450044A83D /* MLBaseViewController.m in Sources */,
 				B1EE746224AAE2C100278A54 /* MLAsyncDisplayKitVC.m in Sources */,
 				6003F59E195388D20070C39A /* MLAppDelegate.m in Sources */,
+				B1BA820724BC05AC002E77FD /* MLCommonTestViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* MLViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				B10F82D324B56F78002D33A2 /* MLLockViewController.m in Sources */,
 				B15411EF2497748B00F07A45 /* DLTempTexTNode.m in Sources */,
+				B1BA820B24BC5709002E77FD /* MLMMAPUtl.m in Sources */,
 				B1528F5D247E90290044A83D /* FMDBDemoVc.m in Sources */,
 				B1A1CB402480EE4E00898395 /* MLFileUtl.m in Sources */,
 				B1528F5C247E90290044A83D /* MLTitleValueModel.m in Sources */,

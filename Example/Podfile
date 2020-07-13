@@ -11,6 +11,8 @@ target 'MLFoundationLib_Example' do
   pod 'YBImageBrowser/Video'
   pod 'FMDB'
   pod 'MJRefresh'
+  pod 'MMKV'
+  pod 'Logan', '~> 1.2.5'
 
   pod 'Texture', :git => 'https://gitee.com/qq912276337/Texture.git',:tag => '2.8'
 #  pod 'AsyncDisplayKit', :git => 'https://gitee.com/qq912276337/Texture.git',:tag => '2.8.1'
