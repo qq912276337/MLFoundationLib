@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "1150"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F589195388D20070C39A"
-               BuildableName = "MLFoundationLib_Example.app"
+               BuildableName = "1MLFoundationLib_Example.app"
                BlueprintName = "MLFoundationLib_Example"
                ReferencedContainer = "container:MLFoundationLib.xcodeproj">
             </BuildableReference>
@@ -27,30 +27,11 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "MLFoundationLib_Example.app"
-            BlueprintName = "MLFoundationLib_Example"
-            ReferencedContainer = "container:MLFoundationLib.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "MLFoundationLib_Tests.xctest"
-               BlueprintName = "MLFoundationLib_Tests"
-               ReferencedContainer = "container:MLFoundationLib.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "ReleaseTest"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -64,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "MLFoundationLib_Example.app"
+            BuildableName = "1MLFoundationLib_Example.app"
             BlueprintName = "MLFoundationLib_Example"
             ReferencedContainer = "container:MLFoundationLib.xcodeproj">
          </BuildableReference>
@@ -81,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "MLFoundationLib_Example.app"
+            BuildableName = "1MLFoundationLib_Example.app"
             BlueprintName = "MLFoundationLib_Example"
             ReferencedContainer = "container:MLFoundationLib.xcodeproj">
          </BuildableReference>

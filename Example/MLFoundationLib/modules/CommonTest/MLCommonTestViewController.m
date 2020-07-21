@@ -16,75 +16,13 @@
 
 #import "MLMMAPUtl.h"
 
-int MapFile1(const char * inPathName, void ** outDataPtr, size_t * outDataLength, size_t appendSize)
-{
-    int outError;
-    int fileDescriptor;
-    struct stat statInfo;
-
-    // Return safe values on error.
-    *outDataPtr = NULL;
-    outError = 0;
-    * outDataLength = 0;
-
-    // Open the file.
-    fileDescriptor = open( inPathName, O_RDWR,  0);
-    if( fileDescriptor <  0)
-    {
-        outError = errno;
-    }
-    else
-    {
-        // We now know the file exists. Retrieve the file size.
-        if( fstat( fileDescriptor, &statInfo ) !=  0)
-        {
-            outError = errno;
-        }
-        else
-        {
-            ftruncate(fileDescriptor, statInfo.st_size + appendSize);
-            fsync(fileDescriptor);
-            *outDataPtr = mmap(NULL,
-                               statInfo.st_size + appendSize,
-                               PROT_READ|PROT_WRITE,
-                               MAP_FILE|MAP_SHARED,
-                               fileDescriptor,
-                               0);
-            if( *outDataPtr == MAP_FAILED )
-            {
-                outError = errno;
-            }
-            else
-            {
-                // On success, return the size of the mapped file.
-                *outDataLength = statInfo.st_size;
-            }
-        }
-
-        // Now close the file. The kernel doesn’t use our file descriptor.
-        close( fileDescriptor );
-    }
-
-    return outError;
-}
-
-
-void ProcessFile1(const char * inPathName,char *content)
-{
-    size_t dataLength;
-    void * dataPtr;
-    char *appendStr = content;
-    int appendSize = (int)strlen(appendStr);
-    if( MapFile1(inPathName, &dataPtr, &dataLength, appendSize) == 0) {
-        dataPtr = dataPtr + dataLength;
-        memcpy(dataPtr, appendStr, appendSize);
-        // Unmap files
-        munmap(dataPtr, appendSize + dataLength);
-    } else {
-        NSLog(@"---%@--",@"error");
-
-    }
-}
+#if DEBUG
+#define ENV_TEXT @"DEBUG"
+#elif RELEASETEST
+#define ENV_TEXT @"RELEASETEST"
+#else
+#define ENV_TEXT @"Release"
+#endif
 
 @interface MLCommonTestViewController ()
 
@@ -102,25 +40,27 @@ void ProcessFile1(const char * inPathName,char *content)
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // important!!! you must replace this key and iv by your own.change key and iv at new version is more secure. we will provide a more secure way to protect your logs in the future.
-    NSData *keydata = [@"MLCommonTestViewController0123456789012345" dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *ivdata = [@"MLCommonTestViewController0123456789012345" dataUsingEncoding:NSUTF8StringEncoding];
-    uint64_t file_max = 100 * 1024 * 1024;
-    // logan init，incoming 16-bit key，16-bit iv，largest written to the file size(byte)
-    loganInit(keydata, ivdata, file_max);
-
-    for (int i = 0; i  < 2; i++) {
-        logan(1,[NSString stringWithFormat:@"logan:%d",i]);
-    }
-//    
+    NSLog(@"---%@--",ENV_TEXT);
+    
+//    // important!!! you must replace this key and iv by your own.change key and iv at new version is more secure. we will provide a more secure way to protect your logs in the future.
+//    NSData *keydata = [@"MLCommonTestViewController0123456789012345" dataUsingEncoding:NSUTF8StringEncoding];
+//    NSData *ivdata = [@"MLCommonTestViewController0123456789012345" dataUsingEncoding:NSUTF8StringEncoding];
+//    uint64_t file_max = 100 * 1024 * 1024;
+//    // logan init，incoming 16-bit key，16-bit iv，largest written to the file size(byte)
+//    loganInit(keydata, ivdata, file_max);
 //
-//    #if DEBUG
-//    loganUseASL(YES);
-//    #endif
-    [self hasFreeSpece];
-    [self freeDiskSpace];
-    [self getfreeDiskSpaceInBytes];
-    // Do any additional setup after loading the view from its nib.
+//    for (int i = 0; i  < 2; i++) {
+//        logan(1,[NSString stringWithFormat:@"logan:%d",i]);
+//    }
+////
+////
+////    #if DEBUG
+////    loganUseASL(YES);
+////    #endif
+//    [self hasFreeSpece];
+//    [self freeDiskSpace];
+//    [self getfreeDiskSpaceInBytes];
+//    // Do any additional setup after loading the view from its nib.
 }
 
 - (BOOL)hasFreeSpece {
