@@ -22,6 +22,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B102E74024C5B3D1004FDD08 /* MLMmapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B102E73F24C5B3D1004FDD08 /* MLMmapManager.m */; };
 		B10F82D324B56F78002D33A2 /* MLLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10F82D224B56F78002D33A2 /* MLLockViewController.m */; };
 		B1528F5C247E90290044A83D /* MLTitleValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1528F58247E90290044A83D /* MLTitleValueModel.m */; };
 		B1528F5D247E90290044A83D /* FMDBDemoVc.m in Sources */ = {isa = PBXBuildFile; fileRef = B1528F5A247E90290044A83D /* FMDBDemoVc.m */; };
@@ -71,6 +72,8 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		918F5518AB1B344066D1B251 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B102E73E24C5B3D1004FDD08 /* MLMmapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLMmapManager.h; sourceTree = "<group>"; };
+		B102E73F24C5B3D1004FDD08 /* MLMmapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLMmapManager.m; sourceTree = "<group>"; };
 		B10F82D124B56F78002D33A2 /* MLLockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLLockViewController.h; sourceTree = "<group>"; };
 		B10F82D224B56F78002D33A2 /* MLLockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLLockViewController.m; sourceTree = "<group>"; };
 		B1528F57247E90290044A83D /* MLTitleValueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTitleValueModel.h; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 		6003F593195388D20070C39A /* Example for MLFoundationLib */ = {
 			isa = PBXGroup;
 			children = (
+				B102E73D24C5B3A7004FDD08 /* MMAP */,
 				B1BA820324BC059F002E77FD /* CommonTest */,
 				B1A1CB3D2480EE3100898395 /* Utl */,
 				B1528F55247E90290044A83D /* Modules */,
@@ -222,6 +226,16 @@
 				918F5518AB1B344066D1B251 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B102E73D24C5B3A7004FDD08 /* MMAP */ = {
+			isa = PBXGroup;
+			children = (
+				B102E73E24C5B3D1004FDD08 /* MLMmapManager.h */,
+				B102E73F24C5B3D1004FDD08 /* MLMmapManager.m */,
+			);
+			name = MMAP;
+			path = Modules/MMAP;
 			sourceTree = "<group>";
 		};
 		B10F82D024B56F65002D33A2 /* Lock */ = {
@@ -500,6 +514,7 @@
 				B1528F5D247E90290044A83D /* FMDBDemoVc.m in Sources */,
 				B1A1CB402480EE4E00898395 /* MLFileUtl.m in Sources */,
 				B1528F5C247E90290044A83D /* MLTitleValueModel.m in Sources */,
+				B102E74024C5B3D1004FDD08 /* MLMmapManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

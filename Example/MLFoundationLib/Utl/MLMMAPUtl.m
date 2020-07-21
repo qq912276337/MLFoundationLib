@@ -11,7 +11,6 @@
 #include<sys/stat.h>
 #include<sys/mman.h>
 
-
 /**
  * 读取文件
  * @param inPathName 文件路径
@@ -66,9 +65,11 @@ int ProcessFile(char *inPathName,char *string){
     struct stat statInfo; // 文件状态
     int fd;               // 文件
     int outError;         // 错误信息
-    
+    mode_t f_attrib;      // 声明mode_t
+
+    f_attrib = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH;
     // 打开文件
-    fd = open( inPathName, O_RDWR | O_CREAT, 0 );
+    fd = open( inPathName, O_RDWR | O_CREAT, f_attrib );
     if(fd < 0){
         outError = errno;
         return 1;
