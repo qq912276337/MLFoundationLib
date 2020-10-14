@@ -33,6 +33,16 @@
 		B1BA820724BC05AC002E77FD /* MLCommonTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BA820524BC05AC002E77FD /* MLCommonTestViewController.m */; };
 		B1BA820824BC05AC002E77FD /* MLCommonTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1BA820624BC05AC002E77FD /* MLCommonTestViewController.xib */; };
 		B1BA820B24BC5709002E77FD /* MLMMAPUtl.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BA820A24BC5709002E77FD /* MLMMAPUtl.m */; };
+		B1D67DBB25371FEF00C600AB /* MLPageTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D67DB925371FEF00C600AB /* MLPageTableController.m */; };
+		B1D67DBC25371FEF00C600AB /* MLPageTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D67DBA25371FEF00C600AB /* MLPageTableController.xib */; };
+		B1D67DC02537227A00C600AB /* MLPageTableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D67DBE2537227A00C600AB /* MLPageTableTextCell.m */; };
+		B1D67DC12537227A00C600AB /* MLPageTableTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D67DBF2537227A00C600AB /* MLPageTableTextCell.xib */; };
+		B1D67DC5253722E800C600AB /* MLPageTableImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D67DC3253722E800C600AB /* MLPageTableImageCell.m */; };
+		B1D67DC6253722E800C600AB /* MLPageTableImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D67DC4253722E800C600AB /* MLPageTableImageCell.xib */; };
+		B1D67DC92537232A00C600AB /* MLPageTableCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D67DC82537232A00C600AB /* MLPageTableCellModel.m */; };
+		B1D67DCD25372A4A00C600AB /* celltmp1.png in Resources */ = {isa = PBXBuildFile; fileRef = B1D67DCC25372A4A00C600AB /* celltmp1.png */; };
+		B1D67DD025372BFF00C600AB /* xiangqing_1yuan.png in Resources */ = {isa = PBXBuildFile; fileRef = B1D67DCE25372BFF00C600AB /* xiangqing_1yuan.png */; };
+		B1D67DD125372BFF00C600AB /* xiangqing_2yuan.png in Resources */ = {isa = PBXBuildFile; fileRef = B1D67DCF25372BFF00C600AB /* xiangqing_2yuan.png */; };
 		B1EE746224AAE2C100278A54 /* MLAsyncDisplayKitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE746024AAE2C100278A54 /* MLAsyncDisplayKitVC.m */; };
 		FE95C276E9E2AE7948573C35 /* Pods_MLFoundationLib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD81F6C3867EDE59D9B9F4BC /* Pods_MLFoundationLib_Example.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +104,20 @@
 		B1BA820624BC05AC002E77FD /* MLCommonTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLCommonTestViewController.xib; sourceTree = "<group>"; };
 		B1BA820924BC5709002E77FD /* MLMMAPUtl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLMMAPUtl.h; sourceTree = "<group>"; };
 		B1BA820A24BC5709002E77FD /* MLMMAPUtl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLMMAPUtl.m; sourceTree = "<group>"; };
+		B1D67DB825371FEF00C600AB /* MLPageTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPageTableController.h; sourceTree = "<group>"; };
+		B1D67DB925371FEF00C600AB /* MLPageTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLPageTableController.m; sourceTree = "<group>"; };
+		B1D67DBA25371FEF00C600AB /* MLPageTableController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLPageTableController.xib; sourceTree = "<group>"; };
+		B1D67DBD2537227A00C600AB /* MLPageTableTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPageTableTextCell.h; sourceTree = "<group>"; };
+		B1D67DBE2537227A00C600AB /* MLPageTableTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLPageTableTextCell.m; sourceTree = "<group>"; };
+		B1D67DBF2537227A00C600AB /* MLPageTableTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLPageTableTextCell.xib; sourceTree = "<group>"; };
+		B1D67DC2253722E800C600AB /* MLPageTableImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPageTableImageCell.h; sourceTree = "<group>"; };
+		B1D67DC3253722E800C600AB /* MLPageTableImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLPageTableImageCell.m; sourceTree = "<group>"; };
+		B1D67DC4253722E800C600AB /* MLPageTableImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLPageTableImageCell.xib; sourceTree = "<group>"; };
+		B1D67DC72537232A00C600AB /* MLPageTableCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPageTableCellModel.h; sourceTree = "<group>"; };
+		B1D67DC82537232A00C600AB /* MLPageTableCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLPageTableCellModel.m; sourceTree = "<group>"; };
+		B1D67DCC25372A4A00C600AB /* celltmp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = celltmp1.png; sourceTree = "<group>"; };
+		B1D67DCE25372BFF00C600AB /* xiangqing_1yuan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiangqing_1yuan.png; sourceTree = "<group>"; };
+		B1D67DCF25372BFF00C600AB /* xiangqing_2yuan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiangqing_2yuan.png; sourceTree = "<group>"; };
 		B1EE746024AAE2C100278A54 /* MLAsyncDisplayKitVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAsyncDisplayKitVC.m; sourceTree = "<group>"; };
 		B1EE746124AAE2C100278A54 /* MLAsyncDisplayKitVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAsyncDisplayKitVC.h; sourceTree = "<group>"; };
 		DB4D868EF865CC2EC4095541 /* MLFoundationLib.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MLFoundationLib.podspec; path = ../MLFoundationLib.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -183,6 +207,7 @@
 				6003F5A5195388D20070C39A /* MLViewController.h */,
 				6003F5A6195388D20070C39A /* MLViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				B1D67DCA25372A2F00C600AB /* resource */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -261,6 +286,7 @@
 		B1528F55247E90290044A83D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B1D67DB725371FDC00C600AB /* MLPageTable */,
 				B10F82D024B56F65002D33A2 /* Lock */,
 				B17B990B2487C001008D1514 /* AsyncDisplayKit */,
 				B1528F56247E90290044A83D /* Home */,
@@ -320,6 +346,42 @@
 			);
 			name = CommonTest;
 			path = Modules/CommonTest;
+			sourceTree = "<group>";
+		};
+		B1D67DB725371FDC00C600AB /* MLPageTable */ = {
+			isa = PBXGroup;
+			children = (
+				B1D67DB825371FEF00C600AB /* MLPageTableController.h */,
+				B1D67DB925371FEF00C600AB /* MLPageTableController.m */,
+				B1D67DBA25371FEF00C600AB /* MLPageTableController.xib */,
+				B1D67DBD2537227A00C600AB /* MLPageTableTextCell.h */,
+				B1D67DBE2537227A00C600AB /* MLPageTableTextCell.m */,
+				B1D67DBF2537227A00C600AB /* MLPageTableTextCell.xib */,
+				B1D67DC2253722E800C600AB /* MLPageTableImageCell.h */,
+				B1D67DC3253722E800C600AB /* MLPageTableImageCell.m */,
+				B1D67DC4253722E800C600AB /* MLPageTableImageCell.xib */,
+				B1D67DC72537232A00C600AB /* MLPageTableCellModel.h */,
+				B1D67DC82537232A00C600AB /* MLPageTableCellModel.m */,
+			);
+			path = MLPageTable;
+			sourceTree = "<group>";
+		};
+		B1D67DCA25372A2F00C600AB /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				B1D67DCB25372A2F00C600AB /* images */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		B1D67DCB25372A2F00C600AB /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B1D67DCC25372A4A00C600AB /* celltmp1.png */,
+				B1D67DCE25372BFF00C600AB /* xiangqing_1yuan.png */,
+				B1D67DCF25372BFF00C600AB /* xiangqing_2yuan.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,9 +469,15 @@
 			files = (
 				B1BA820824BC05AC002E77FD /* MLCommonTestViewController.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				B1D67DC6253722E800C600AB /* MLPageTableImageCell.xib in Resources */,
+				B1D67DBC25371FEF00C600AB /* MLPageTableController.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				B1D67DD125372BFF00C600AB /* xiangqing_2yuan.png in Resources */,
+				B1D67DD025372BFF00C600AB /* xiangqing_1yuan.png in Resources */,
+				B1D67DC12537227A00C600AB /* MLPageTableTextCell.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				B1D67DCD25372A4A00C600AB /* celltmp1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,13 +574,17 @@
 				B15411ED2497748B00F07A45 /* DLTempCellNode.m in Sources */,
 				B1528F60247E90450044A83D /* MLBaseViewController.m in Sources */,
 				B1EE746224AAE2C100278A54 /* MLAsyncDisplayKitVC.m in Sources */,
+				B1D67DC02537227A00C600AB /* MLPageTableTextCell.m in Sources */,
 				6003F59E195388D20070C39A /* MLAppDelegate.m in Sources */,
 				B1BA820724BC05AC002E77FD /* MLCommonTestViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* MLViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				B10F82D324B56F78002D33A2 /* MLLockViewController.m in Sources */,
 				B15411EF2497748B00F07A45 /* DLTempTexTNode.m in Sources */,
+				B1D67DC92537232A00C600AB /* MLPageTableCellModel.m in Sources */,
+				B1D67DC5253722E800C600AB /* MLPageTableImageCell.m in Sources */,
 				B1BA820B24BC5709002E77FD /* MLMMAPUtl.m in Sources */,
+				B1D67DBB25371FEF00C600AB /* MLPageTableController.m in Sources */,
 				B1528F5D247E90290044A83D /* FMDBDemoVc.m in Sources */,
 				B1A1CB402480EE4E00898395 /* MLFileUtl.m in Sources */,
 				B1528F5C247E90290044A83D /* MLTitleValueModel.m in Sources */,

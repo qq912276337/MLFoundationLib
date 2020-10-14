@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F589195388D20070C39A"
-               BuildableName = "MLFoundationLib_Example.app"
+               BuildableName = "1MLFoundationLib_Example.app"
                BlueprintName = "MLFoundationLib_Example"
                ReferencedContainer = "container:MLFoundationLib.xcodeproj">
             </BuildableReference>
@@ -31,7 +31,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "MLFoundationLib_Example.app"
+            BuildableName = "1MLFoundationLib_Example.app"
             BlueprintName = "MLFoundationLib_Example"
             ReferencedContainer = "container:MLFoundationLib.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "MLFoundationLib_Example.app"
+            BuildableName = "1MLFoundationLib_Example.app"
             BlueprintName = "MLFoundationLib_Example"
             ReferencedContainer = "container:MLFoundationLib.xcodeproj">
          </BuildableReference>
@@ -81,7 +81,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "MLFoundationLib_Example.app"
+            BuildableName = "1MLFoundationLib_Example.app"
             BlueprintName = "MLFoundationLib_Example"
             ReferencedContainer = "container:MLFoundationLib.xcodeproj">
          </BuildableReference>

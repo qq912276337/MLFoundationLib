@@ -14,6 +14,7 @@
 #import "MLAsyncDisplayKitVC.h"
 #import "MLLockViewController.h"
 #import "MLCommonTestViewController.h"
+#import "MLPageTableController.h"
 
 static NSString *kMLVcCellKey = @"kMLVcCellKey";
 
@@ -67,6 +68,11 @@ static NSString *kMLVcCellKey = @"kMLVcCellKey";
     
     [self.items addObject:[self modelWithTitle:NSStringFromClass([MLCommonTestViewController class]) clickBlock:^{
         [weakSelf.navigationController pushViewController:[MLCommonTestViewController new] animated:YES];
+    }]];
+    
+    
+    [self.items addObject:[self modelWithTitle:NSStringFromClass([MLPageTableController class]) clickBlock:^{
+        [weakSelf.navigationController pushViewController:[MLPageTableController new] animated:YES];
     }]];
     
     [self.tableView reloadData];
