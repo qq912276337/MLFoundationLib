@@ -25,6 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIImage *image;
 
+@property (nonatomic, copy) NSString *configureAction;
+
+@property (nonatomic, copy) NSString *callbackAction;
+
 @end
 
 NS_ASSUME_NONNULL_END

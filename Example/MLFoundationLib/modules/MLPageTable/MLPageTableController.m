@@ -26,7 +26,6 @@
     
     self.tableView.estimatedRowHeight = 44;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MLPageTableCellID"];
     [self.tableView registerNib:[UINib nibWithNibName:@"MLPageTableTextCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"MLPageTableTextCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"MLPageTableImageCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"MLPageTableImageCell"];
 
@@ -38,13 +37,19 @@
     MLPageTableCellModel *model0 = [MLPageTableCellModel new];
     model0.type = MLPageTableCellTypeText;
     model0.cellID = @"MLPageTableTextCell";
-    model0.text = @"model0:MLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCell";
+    model0.text = @"model0:MLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCellMLPageTableTextCell";
     
     MLPageTableCellModel *model1 = [MLPageTableCellModel new];
     model1.type = MLPageTableCellTypeImage;
     model1.cellID = @"MLPageTableImageCell";
     model1.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"xiangqing_1yuan.png" ofType:nil]];
     
+    [self.items addObject:model0];
+    [self.items addObject:model1];
+    [self.items addObject:model0];
+    [self.items addObject:model0];
+    [self.items addObject:model0];
+    [self.items addObject:model0];
     [self.items addObject:model0];
     [self.items addObject:model1];
 }
@@ -65,6 +70,11 @@
     } else if(model.type == MLPageTableCellTypeImage) {
         MLPageTableImageCell *nowCell = (MLPageTableImageCell *)cell;
         nowCell.contentImageView.image = model.image;
+        nowCell.contentImageView.contentMode = UIViewContentModeScaleToFill;
+        nowCell.backgroundColor = [UIColor greenColor];
+    }
+    if(model.configureAction && [self respondsToSelector:NSSelectorFromString(model.configureAction)]){
+        [self performSelector:NSSelectorFromString(model.configureAction) withObject:cell withObject:indexPath];
     }
     return cell;
 }
